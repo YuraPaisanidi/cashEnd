@@ -237,18 +237,21 @@
 				color: $accent
 
 	&__item
-		margin-bottom: 20px
+		margin-bottom: 15px
 		width: 100%
 
 	&__input
 		position: relative
+
+		&_wrap
+			position: relative
 
 		&--pass
 			padding: 0 20px !important
 
 		&--control
 			position: absolute
-			top: 55%
+			top: 35%
 			right: 20px
 			display: inline-block
 			width: 18px
@@ -306,6 +309,10 @@
 			input
 				border-color: $red
 
+	&__remind
+		color: $red
+		margin-bottom: 20px
+
 .signin-sms__wrap
 	display: flex
 	gap: 5px
@@ -327,13 +334,24 @@
 		border-color: $accent
 
 .signin-sms__wrap input:not(:first-child) 
-  margin-left: 1%
-
+	margin-left: 1%
 
 .signin-sms__wrap.done 
-  opacity: 0
+	opacity: 0
 
+//---------------------------------Login page-----------------------
+.login
+	@extend .registr
 
+	&__container
+		@extend .registr__container
+
+	&__btn
+		@extend .registr__btn
+		max-width: 140px
+
+		+r(480)
+			max-width: 100%
 
 .footer
 	&__container
