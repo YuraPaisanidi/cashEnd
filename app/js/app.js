@@ -305,4 +305,40 @@ document.addEventListener("DOMContentLoaded", function() {
 		forms('.form');
 
 });
-	
+
+
+//----------------------SMS-code field----------------------
+$('.sms-input:first-child').focus();
+
+$('.sms-input').on('keydown', function(e) {
+  let value = $(this).val();
+  let len = value.length;
+  let curTabIndex = parseInt($(this).attr('tabindex'));
+  let nextTabIndex = curTabIndex + 1;
+  let prevTabIndex = curTabIndex - 1;
+  if (len > 0) {
+    $(this).val(value.substr(0, 1));
+    $('[tabindex=' + nextTabIndex + ']').focus();
+  } else if (len == 0 && prevTabIndex !== 0) {
+    $('[tabindex=' + prevTabIndex + ']').focus();
+  }
+});
+
+// $('.sms-input:last-child').on('keyup', function(e) { 
+//   if($(this).val() != '') {
+//     $('.signin-sms__wrap').addClass('done')
+//   } 
+// })
+
+//-------------------------Show/hide pass-------------------
+function show_hide_password(target){
+	var input = document.getElementById('registrPass');
+	if (input.getAttribute('type') == 'password') {
+		target.classList.add('view');
+		input.setAttribute('type', 'text');
+	} else {
+		target.classList.remove('view');
+		input.setAttribute('type', 'password');
+	}
+	return false;
+}
