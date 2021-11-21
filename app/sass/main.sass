@@ -650,12 +650,12 @@
 			max-width: 100%
 			margin: 0
 
-	&__table
+	&__content
 		border-radius: 12px
 		background: $gray3
 		padding: 35px
 
-		+r(576)
+		+r(767)
 			padding: 15px
 
 		+r(370)
@@ -666,6 +666,7 @@
 		align-items: center
 		justify-content: space-between
 		gap: 25px
+		margin-bottom: 20px
 
 		+r(992)
 			display: none
@@ -755,6 +756,103 @@
 				padding: 0 10px
 				max-width: 100px
 
+	&__table
+
+		&_row
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr 25px
+			align-items: center
+			padding: 20px 10px
+			gap: 20px
+
+			+r(767)
+				font-size: 14px
+				gap: 10px
+
+			+r(576)
+				grid-template-columns: 80px 25px 1fr 25px
+				gap: 15px
+
+		&_sum
+			span
+			
+			&.earnings
+				span
+					color: $green
+
+		&_type
+			display: flex
+			align-items: center
+			gap: 10px
+
+			span
+				+r(576)
+					display: none
+
+		&_more
+			display: flex
+			align-items: center
+			justify-content: flex-end
+
+		&_more-wrap
+			color: $gray1
+			font-size: 26px
+			position: relative
+			width: 24px
+
+			&:hover
+				ul
+					opacity: 1
+					visibility: visible
+
+			ul
+				position: absolute
+				top: 115%
+				right: 0
+				font-size: 16px
+				background: #fff
+				border-radius: 12px
+				padding: 20px
+				box-shadow: 0px -27px 112px rgba(0, 0, 0, 0.03), 0px -11.28px 46.7909px rgba(0, 0, 0, 0.0215656), 0px -6.0308px 25.0167px rgba(0, 0, 0, 0.0178832), 0px -3.38082px 14.0241px rgba(0, 0, 0, 0.015), 0px -1.79553px 7.44811px rgba(0, 0, 0, 0.0121168), 0px -0.747159px 3.09933px rgba(0, 0, 0, 0.00843437)
+				opacity: 0
+				visibility: hidden
+				display: flex
+				flex-direction: column
+				gap: 25px
+				min-width: 291px
+				z-index: 10
+				+transition
+
+				a
+					color: $gray0
+
+					&:hover
+						color: $accent
+
+
+			span
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 24px
+				width: 24px
+				border-radius: 5px
+				padding: 0 3px
+				+transition
+
+				svg
+					path
+						+transition
+
+				&:hover
+					cursor: pointer
+					background: $gray2
+
+					svg
+						path
+							fill: $gray0
+
+
 .lightpick
 
 	&__footer
@@ -797,7 +895,6 @@
 	.is-end-date,
 	.is-start-date
 		background: $accent !important
-
 
 .toggle
 
