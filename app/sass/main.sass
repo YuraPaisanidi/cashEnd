@@ -194,25 +194,90 @@
 
 	&__menu
 		position: absolute
-		top: 105%
+		top: 130%
 		right: 0
-		background: $gray3
+		background: #fff
 		border-radius: 12px
-		padding: 10px 15px
-		min-width: 200px
+		padding: 20px 0
+		min-width: 270px
 		display: flex
 		flex-direction: column
 		align-items: center
 		justify-content: center
 		gap: 5px
 		opacity: 0
+		box-shadow: 0px -27px 112px rgba(0, 0, 0, 0.03), 0px -11.28px 46.7909px rgba(0, 0, 0, 0.0215656), 0px -6.0308px 25.0167px rgba(0, 0, 0, 0.0178832), 0px -3.38082px 14.0241px rgba(0, 0, 0, 0.015), 0px -1.79553px 7.44811px rgba(0, 0, 0, 0.0121168), 0px -0.747159px 3.09933px rgba(0, 0, 0, 0.00843437)
 		+transition
 
 		a
-			color: $gray0
+			color: $gray1
 
 			&:hover
 				color: $accent
+
+		li
+			width: 100%
+			padding: 0 20px
+
+		&_name
+			margin-bottom: 15px
+
+			p
+				font-size: 18px
+				font-weight: 700
+				color: $gray0
+
+		&_link
+
+			a
+				display: flex
+				justify-content: space-between
+				gap: 20px
+				padding: 10px
+				color: $gray0
+				border-radius: 12px
+
+				&:hover
+					background: $gray3
+					color: $gray0
+
+				&.logout
+					color: $red
+
+					svg
+						path
+							fill: $red
+
+		&_soc
+			display: flex
+			align-items: center
+			gap: 5px
+			padding: 20px !important
+			padding-bottom: 0 !important
+			border-top: 1px solid #CDCDD5
+
+			p
+				margin-right: 6px
+
+			a
+				width: 45px
+				height: 45px
+				border-radius: 15px
+				display: flex
+				align-items: center
+				justify-content: center
+				background: $gray2
+
+				svg
+					path
+						+transition
+
+				&:hover
+
+					svg
+						path
+							fill: $accent
+
 
 
 	&__btn
