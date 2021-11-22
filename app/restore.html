@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Восстановление пароля</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<!-- <meta property="og:image" content="img/preview.jpg"> -->
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="registr">
+			<div class="registr__container container">
+
+				<form action="#" class="registr__form">
+					<div class="registr__form_top">
+						<h2 class="h2 registr__title">
+							Восстановление пароля
+						</h2>
+	
+						<div class="form__item registr__item">
+							<input type="tel" class="form__input registr__input registr__input--tel" name="registrTel" id="registrTel" placeholder="+7 777 777 7777">
+							<span class="registr__input_flag">
+								<img src="img/kz.png" alt="">
+							</span>
+						</div>
+	
+						<div class="g-recaptcha" data-sitekey="your_site_key"></div>
+					</div>
+
+					<div class="registr__form_bottom">
+						<button class="registr__btn btn">Продолжить</button>
+						<a href="#" class="registr__login">Есть кошелек? <span>Войдите</span></a>
+					</div>
+
+				</form>
+
+				<form action="#" class="registr__form">
+					<div class="registr__form_top">
+						<h2 class="h2 registr__title--code">
+							Введите код из СМС
+						</h2>
+						<p class="registr__notice">Код отправлен на +7 777 111 1128</p>
+
+						<div class="signin-sms__wrap registr__sms">
+							<input class="sms-input" type="tel" maxlength="1" tabindex="1">
+							<input class="sms-input" type="tel" maxlength="1" tabindex="2">
+							<input class="sms-input" type="tel" maxlength="1" tabindex="3">
+							<input class="sms-input" type="tel" maxlength="1" tabindex="4">
+						</div>
+					</div>
+					
+					<div class="registr__form_bottom">
+						<button class="registr__btn btn">Подтвердить</button>
+						<p class="registr__notice--request">Запросите код повторно через 28 сек</p>
+					</div>
+				</form>
+
+				<form action="#" class="registr__form registr__form">
+					<div class="registr__form_top">
+						<h2 class="h2 registr__title">
+							Придумайте пароль<br> для входа
+						</h2>
+
+						<div class="form__item registr__item">
+							<label for="registrPass">Новый пароль</label>
+							<div class="registr__input_wrap">
+								<input type="password" class="form__input registr__input registr__input--pass" name="registrPass" id="registrPass">
+								<a href="#" class="registr__input--control" onclick="return show_hide_password(this);"></a>
+							</div>
+						</div>
+
+						<div class="regist__validation">
+							<div class="registr__validation_item">
+								<svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.66698 7.11451L10.795 0.98584L11.7383 1.92851L4.66698 8.99984L0.424316 4.75717L1.36698 3.81451L4.66698 7.11451Z" fill="#EAECEF"/>
+								</svg>
+								<span>Не менее 7 и не более 30 символов</span>
+							</div>
+							<div class="registr__validation_item valid">
+								<svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.66698 7.11451L10.795 0.98584L11.7383 1.92851L4.66698 8.99984L0.424316 4.75717L1.36698 3.81451L4.66698 7.11451Z" fill="#EAECEF"/>
+								</svg>
+								<span>Есть цифры и латинские буквы</span>
+							</div>
+							<div class="registr__validation_item valid">
+								<svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.66698 7.11451L10.795 0.98584L11.7383 1.92851L4.66698 8.99984L0.424316 4.75717L1.36698 3.81451L4.66698 7.11451Z" fill="#EAECEF"/>
+								</svg>
+								<span>Есть заглавные и строчные буквы</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="registr__form_bottom">
+						<button class="registr__btn btn">Подтвердить</button>
+						<a href="#" class="registr__notice--request">Не пришел код? <span>Запросите код повторно</span></a>
+					</div>
+				</form>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>
