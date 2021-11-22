@@ -373,8 +373,11 @@
 		&_wrap
 			position: relative
 
-		&--pass
-			padding: 0 20px !important
+		// &--pass
+		// 	padding: 0 20px !important
+
+		&--tel
+			padding: 0 40px !important
 
 		&--control
 			position: absolute
@@ -864,7 +867,6 @@
 						path
 							fill: $gray0
 
-
 .lightpick
 
 	&__footer
@@ -942,9 +944,21 @@
 
 	input[type="radio"] + label
 
+//---------------------Transaction---------------------
+.transaction
+	@extend .registr
 
-//--------------------------------------------------------
+	&__container
+		@extend .registr__container
 
+	&__notice
+		padding: 15px
+		width: 100%
+		background: rgba(96, 188, 81, 0.1)
+		border-radius: 12px
+		display: flex
+		align-items: center
+		gap: 15px
 
 .footer
 	&__container
@@ -1086,7 +1100,7 @@
 		width: 100%
 		height: 55px
 		line-height: 55px
-		padding: 0 40px
+		padding: 0 20px
 		border: 1px solid transparent
 		background: $gray3
 		border-radius: 12px
