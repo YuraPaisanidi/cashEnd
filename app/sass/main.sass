@@ -867,6 +867,40 @@
 						path
 							fill: $gray0
 
+	.toggle
+
+		input
+			display: none
+
+		.label
+			height: 35px
+			font-size: 14px
+			border-radius: 12px
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-bottom: 0
+			padding: 0 12px
+			+transition
+
+			+r(576)
+				padding: 0 8px
+
+			+r(370)
+				font-size: 12px
+				height: 30px
+
+			&:hover
+				cursor: pointer
+
+		input[type="radio"]
+			display: none
+
+		input[type="radio"]:checked + label
+			background-color: #fff
+
+		input[type="radio"] + label
+
 .lightpick
 
 	&__footer
@@ -910,39 +944,6 @@
 	.is-start-date
 		background: $accent !important
 
-.toggle
-
-	input
-		display: none
-
-	.label
-		height: 35px
-		font-size: 14px
-		border-radius: 12px
-		display: flex
-		align-items: center
-		justify-content: center
-		margin-bottom: 0
-		padding: 0 12px
-		+transition
-
-		+r(576)
-			padding: 0 8px
-
-		+r(370)
-			font-size: 12px
-			height: 30px
-
-		&:hover
-			cursor: pointer
-
-	input[type="radio"]
-		display: none
-
-	input[type="radio"]:checked + label
-		background-color: #fff
-
-	input[type="radio"] + label
 
 //---------------------Transaction---------------------
 .transaction
@@ -1063,7 +1064,113 @@
 			font-size: 20px
 			font-weight: 600
 			margin-bottom: 20px
-			text-align: center
+
+//------------------------print-order---------------------------
+.print-order
+	padding: 40px 0
+	
+	+r(767)
+		padding: 20px 0
+
+	&__container
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__form
+		padding: 30px
+		border-radius: 12px
+		border: 1px solid $gray2
+		max-width: 645px
+		width: 100%
+		display: flex
+		flex-direction: column
+		gap: 20px
+
+		+r(767)
+			border: none
+			padding: 0
+
+	&__radio
+		display: flex
+		align-items: center
+		gap: 5px
+
+	&__item
+
+		p
+			margin-bottom: 5px
+
+	.toggle
+
+		input
+			display: none
+
+		.label
+			height: 40px
+			width: 70px
+			border-radius: 100px
+			background: $gray3
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-bottom: 0
+			padding: 0 12px
+			+transition
+
+			+r(576)
+				padding: 0 8px
+
+			&:hover
+				cursor: pointer
+
+		input[type="radio"]
+			display: none
+
+		input[type="radio"]:checked + label
+			background-color: $accent
+			color: #fff
+
+		input[type="radio"] + label
+
+	&__input
+		height: 40px
+		line-height: 40px
+		max-width: 285px
+
+		+r(767)
+			max-width: 100%
+
+		&--tel
+			@extend .registr__input--tel
+	
+		&_flag
+			@extend .registr__input_flag
+			top: 18%
+
+		&_wrap
+			position: relative
+
+	&__address
+
+		&_wrap
+			display: grid
+			grid-template-columns: 1fr 1fr
+			gap: 14px
+
+			+r(767)
+				grid-template-columns: 1fr
+
+		&_title
+			font-size: 18px
+			font-weight: 600
+			margin-bottom: 10px
+
+	&__btn
+		max-width: 285px
+
+		+r(767)
+			max-width: 100%
 
 .footer
 	&__container
@@ -1203,8 +1310,8 @@
 
 	&__input
 		width: 100%
-		height: 55px
-		line-height: 55px
+		// height: 55px
+		// line-height: 55px
 		padding: 0 20px
 		border: 1px solid transparent
 		background: $gray3

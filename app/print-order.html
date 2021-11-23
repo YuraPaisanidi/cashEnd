@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Заказать визитку</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<!-- <meta property="og:image" content="img/preview.jpg"> -->
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="print-order">
+			<div class="print-order__container container">
+				<form action="#" class="print-order__form">
+					<h1 class="h2 print-order__title">Заказать визитку</h1>
+
+					<div class="print-order__item">
+						<p>Количество</p>
+
+						<div class="print-order__radio">
+							<div class="toggle">
+								<input type="radio" class="radio" name="quantity" id="toggle_quantity1">
+								<label for="toggle_quantity1" class="label" value="30">30</label>
+							</div>
+							<div class="toggle">
+								<input type="radio" class="radio" name="quantity" id="toggle_quantity2">
+								<label for="toggle_quantity2" class="label" value="50">50</label>
+							</div>
+							<div class="toggle">
+								<input type="radio" class="radio" name="quantity" id="toggle_quantity3">
+								<label for="toggle_quantity3" class="label" value="100">100</label>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="print-order__item">
+						<p>Контактный телефон</p>
+						<div class="print-order__input_wrap">
+							<input type="tel" class="form__input print-order__input print-order__input--tel" name="registrTel" id="registrTel" placeholder="+7 777 777 7777">
+							<span class="print-order__input_flag">
+								<img src="img/kz.png" alt="">
+							</span>
+						</div>
+					</div>
+
+					<div class="print-order__address">
+						<p class="print-order__address_title">Адрес доставки</p>
+						<div class="print-order__address_wrap">
+							<div class="print-order__item">
+								<p>Город</p>
+								<input type="text" class="form__input print-order__input">
+							</div>
+							<div class="print-order__item">
+								<p>Улица</p>
+								<input type="text" class="form__input print-order__input">
+							</div>
+							<div class="print-order__item">
+								<p>Дом</p>
+								<input type="text" class="form__input print-order__input">
+							</div>
+							<div class="print-order__item">
+								<p>Индекс</p>
+								<input type="text" class="form__input print-order__input">
+							</div>
+						</div>
+					</div>
+
+					<a href="#" class="print-order__btn btn">Отправить заявку на заказ</a>
+
+				</form>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>
