@@ -369,6 +369,7 @@
 
 	&__input
 		position: relative
+		height: 55px
 
 		&_wrap
 			position: relative
@@ -1187,6 +1188,12 @@
 			font-size: 18px
 			font-weight: 600
 
+//-------------------------------Send-------------------
+.send
+	@extend .transaction
+
+	&__container
+		@extend .transaction__container
 
 .footer
 	&__container
@@ -1319,6 +1326,15 @@
 	&__item
 		position: relative
 
+		&._error
+			label,
+			span
+				color: $red
+
+			span
+				display: flex
+				margin-top: 5px
+
 	&__label
 		font-size: 16px
 		font-weight: 500
@@ -1342,8 +1358,8 @@
 			border-color: $accent
 
 		&._error
-			box-shadow: 0 0 4px 0 rgba(red, 1)
 			border-color: red
+			color: $red
 	
 	&__textarea
 		width: 100%

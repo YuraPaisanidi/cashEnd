@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Отправить квитанцию</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<!-- <meta property="og:image" content="img/preview.jpg"> -->
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="send">
+			<div class="send__container container">
+
+				<form action="#" class="registr__form">
+					<div class="registr__form_top">
+						<h2 class="h2 registr__title">
+							Отправить файл на почту
+						</h2>
+	
+						<div class="form__item registr__item">
+							<label for="registrEmail">Введите ваш действующий email </label>
+							<input type="email" class="form__input registr__input" name="registrEmail" id="registrEmail" placeholder="Ваш email">
+						</div>
+					</div>
+
+					<div class="registr__form_bottom">
+						<button class="registr__btn btn">Отправить</button>
+					</div>
+
+				</form>
+
+				<form action="#" class="registr__form">
+					<div class="registr__form_top">
+						<h2 class="h2 registr__title">
+							Отправить файл на почту
+						</h2>
+	
+						<div class="form__item registr__item _error">
+							<label for="registrEmail">Введите ваш действующий email </label>
+							<input type="email" class="form__input registr__input _error" name="registrEmail" id="registrEmail" placeholder="Ваш email">
+							<span>Email введен неверно</span>
+						</div>
+					</div>
+
+					<div class="registr__form_bottom">
+						<button class="registr__btn btn">Отправить</button>
+					</div>
+
+				</form>
+
+				<form action="#" class="registr__form">
+					<div class="registr__form_top">
+						<h2 class="h2 registr__title">
+							Отправить файл на почту
+						</h2>
+
+						<div class="transaction__notice">
+							<img src="img/verified.svg" alt="">
+							<p>Файл успешно отправлен на email</p>
+						</div>
+					</div>
+
+					<div class="registr__form_bottom">
+						<button class="registr__btn btn">Хорошо</button>
+					</div>
+
+				</form>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>
