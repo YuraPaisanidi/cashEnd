@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Вывести на карту</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<!-- <meta property="og:image" content="img/preview.jpg"> -->
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body class="payment-bg">
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="payment">
+			<div class="payment__container container">
+				<div class="payment__wrap">
+					<div class="payment__message">
+						<div class="payment__img">
+							<img src="img/profile.jpg" alt="">
+							<span>
+								<img src="img/verified.svg" alt="">
+							</span>
+						</div>
+						<div class="payment__text">
+							<p class="payment__name">Спасибо!</p>
+							<p class="payment__desc">Ваша оплата прошла успешно</p>
+						</div>
+						<a href="#" class="payment__message_btn btn">Отправить eще</a>
+					</div>
+
+					<div class="payment__message payment__message--wrong">
+						<img src="img/wrong.svg" alt="">
+						<div class="payment__text">
+							<p class="payment__name">Ошибка транзакции 😔</p>
+							<p class="payment__desc">Возможно, на карте недостаточно средств или установлен лимит банком.</p>
+						</div>
+						<a href="#" class="payment__message_btn btn">Попробовать еще раз</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>

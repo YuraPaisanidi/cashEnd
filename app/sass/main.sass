@@ -1333,6 +1333,13 @@
 			background: $accent
 			z-index: -2
 
+		span
+			position: absolute
+			top: 40%
+			right: -10px
+			width: 44px
+			height: 44px
+
 		img
 			object-fit: cover
 			width: 100%
@@ -1345,6 +1352,7 @@
 
 	&__desc
 		font-weight: 600
+		max-width: 365px
 
 	&__form
 		max-width: 420px
@@ -1498,6 +1506,30 @@
 				z-index: 1
 				+transition
 
+	&__message
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		gap: 25px
+
+		&_btn
+			height: 40px
+			max-width: 145px
+			background: $gray2
+			padding: 0 10px
+			border-color: transparent
+			color: $gray0
+
+			&:hover
+				background: darken($gray2, 10%)
+				border-color: transparent
+				color: $gray0
+
+		&--wrong
+
+			a
+				max-width: 195px
 
 .footer
 	&__container
