@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Вывести на карту</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<!-- <meta property="og:image" content="img/preview.jpg"> -->
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="withdraw">
+			<div class="withdraw__container container">
+				<div class="withdraw__message">
+					<h2 class="h2 withdraw__title">Вывести на карту</h2>
+
+					<div class="withdraw__notice">
+						<img src="img/verified.svg" alt="">
+						<div class="withdraw__notice_text">
+							<p>Перевод выполнен успешно!</p>
+							<span>Сумма платежа: 1000 тенге</span>
+						</div>
+					</div>
+
+					<button type="button" class="withdraw__btn btn">Готово</button>
+				</div>
+
+				<div class="withdraw__not-verified">
+					<h3 class="withdraw__not-verified_title">
+						Вывод средств доступен только верифицированным пользователям
+					</h3>
+
+					<a href="#" class="withdraw__not-verified_btn btn">
+						Пройти верификацию
+					</a>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>
