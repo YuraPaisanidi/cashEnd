@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Вывести на карту</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<!-- <meta property="og:image" content="img/preview.jpg"> -->
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="withdraw">
+			<div class="withdraw__container container">
+				<form action="#" class="withdraw__form">
+					<div>
+						<h1 class="h2 withdraw__title">Вывести на карту</h1>
+						<p class="withdraw__subtitle">Твой баланс <span>₸12345</span></p>
+					</div>
+	
+					<div class="withdraw__item">
+						<label for="withdrawSum">Введите сумму</label>
+						<input type="number" class="withdraw__input form__input" name="withdrawSum" id="withdrawSum">
+						<span>Минимум 1 тенге, максимум 60000 тенге</span>
+					</div>
+	
+					<div class="withdraw__item">
+						<label for="">Куда перевести?</label>
+						<span>Введите номер карты</span>
+	
+						<div class="withdraw__card">
+							<input class="withdraw__card_input form__input" type="tel" maxlength="4" placeholder="XXXX">
+							<input class="withdraw__card_input form__input" type="tel" maxlength="4" placeholder="XXXX">
+							<input class="withdraw__card_input form__input" type="tel" maxlength="4" placeholder="XXXX">
+							<input class="withdraw__card_input form__input" type="tel" maxlength="4" placeholder="XXXX">
+						</div>
+					</div>
+	
+					<div class="withdraw__submit">
+						<button type="submit" class="withdraw__btn btn">Вывести ₸773</button>
+						<span>Включая комиссю 6%</span>
+					</div>
+				</form>
+
+				<form action="#" class="withdraw__form">
+					<div>
+						<h1 class="h2 withdraw__title">Вывести на карту</h1>
+						<p class="withdraw__subtitle">Твой баланс <span>₸12345</span></p>
+					</div>
+	
+					<div class="withdraw__item">
+						<label for="withdrawSum">Введите сумму</label>
+						<input type="number" class="withdraw__input form__input _error" name="withdrawSum" id="withdrawSum">
+						<p class="withdraw__error">Операция не может выполнена,так как недостаточно средств</p>
+						<span>Минимум 1 тенге, максимум 60000 тенге</span>
+					</div>
+	
+					<div class="withdraw__item">
+						<label for="">Куда перевести?</label>
+						<span>Введите номер карты</span>
+						<div class="withdraw__card">
+							<input class="withdraw__card_input form__input _error" type="tel" maxlength="4" placeholder="XXXX">
+							<input class="withdraw__card_input form__input _error" type="tel" maxlength="4" placeholder="XXXX">
+							<input class="withdraw__card_input form__input _error" type="tel" maxlength="4" placeholder="XXXX">
+							<input class="withdraw__card_input form__input _error" type="tel" maxlength="4" placeholder="XXXX">
+						</div>
+						<p class="withdraw__error">Операция не может выполнена,так как недостаточно средств</p>
+					</div>
+	
+					<div class="withdraw__submit">
+						<button type="submit" class="withdraw__btn btn">Вывести ₸773</button>
+						<span>Включая комиссю 6%</span>
+					</div>
+				</form>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>
