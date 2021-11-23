@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Вывести на карту</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<!-- <meta property="og:image" content="img/preview.jpg"> -->
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body class="payment-bg">
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="payment">
+
+			<div class="payment__container container">
+				<div class="payment__wrap">
+					<div class="payment__top">
+						<div class="payment__img">
+							<img src="img/profile.jpg" alt="">
+						</div>
+						<div class="payment__text">
+							<p class="payment__name">Cергей</p>
+							<p class="payment__desc">получит вашу благодарность</p>
+						</div>
+					</div>
+
+					<form action="#" class="payment__form">
+						<div class="payment__item">
+							<label for="paymentSum">Введите сумму</label>
+							<div class="payment__input_wrap">
+								<input type="number" class="form__input payment__input" name="paymentSum" id="paymentSum">
+							</div>
+							<span>Минимум 1 тенге, максимум 60000 тенге</span>
+						</div>
+
+						<div class="payment__item">
+							<label for="paymentSumRadio">или выберите</label>
+							<div class="payment__radio">
+								<div class="toggle">
+									<input type="radio" class="radio" name="sum" id="toggle_sum1">
+									<label for="toggle_sum1" class="label" value="100">100</label>
+								</div>
+								<div class="toggle">
+									<input type="radio" class="radio" name="sum" id="toggle_sum2">
+									<label for="toggle_sum2" class="label" value="200">200</label>
+								</div>
+								<div class="toggle">
+									<input type="radio" class="radio" name="sum" id="toggle_sum3">
+									<label for="toggle_sum3" class="label" value="300">300</label>
+								</div>
+								<div class="toggle">
+									<input type="radio" class="radio" name="sum" id="toggle_sum4">
+									<label for="toggle_sum4" class="label" value="400">400</label>
+								</div>
+							</div>
+						</div>
+
+						<button type="submit" class="payment__btn btn">Оплатить</button>
+
+						<div class="payment__switch">
+							<span class="toggle-bg">
+								<input type="radio" name="toggle" value="off">
+								<input type="radio" name="toggle" value="on"> 
+								<span class="switch"></span>
+							</span>
+							<div class="payment__switch_text">
+								<p>Перевести получателю полную сумму</p>
+								<span>Компенсируйте комиссию сервиса, с вашей карту спишется ХХ тенге</span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>
