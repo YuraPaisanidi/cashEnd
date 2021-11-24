@@ -211,60 +211,60 @@ document.addEventListener("DOMContentLoaded", function() {
 				return error;
 			}
 
-			const formImgFile = formParent.querySelectorAll('.formImgFile');
+			// const formImgFile = formParent.querySelectorAll('.formImgFile');
 
-			formImgFile.forEach(item => { 
-				const elem = 'formImgFile--' + i++;
+			// formImgFile.forEach(item => { 
+			// 	const elem = 'formImgFile--' + i++;
 
-				let formId = item.id = (elem);
-				let formParent = document.querySelector('#' + formId);
+			// 	let formId = item.id = (elem);
+			// 	let formParent = document.querySelector('#' + formId);
 
-				const formImage = formParent.querySelector('.formImage');
-				const formLebel = formParent.querySelector('.formLebel');
-				const formPreview = formParent.querySelector('.formPreview');
+			// 	const formImage = formParent.querySelector('.formImage');
+			// 	const formLebel = formParent.querySelector('.formLebel');
+			// 	const formPreview = formParent.querySelector('.formPreview');
 
-				//картинка в форме
-				let formImageNumber = 'formImage--' + img++;
-				let formPreviewNumber = 'formPreview--' + prev++;
+			// 	//картинка в форме
+			// 	let formImageNumber = 'formImage--' + img++;
+			// 	let formPreviewNumber = 'formPreview--' + prev++;
 				
-				formImage.id = (formImageNumber);
-				formLebel.htmlFor = ('formImage--' + lebel++);
-				formPreview.id = (formPreviewNumber);
-				const formImageAdd = document.querySelector('#' + formImageNumber);
+			// 	formImage.id = (formImageNumber);
+			// 	formLebel.htmlFor = ('formImage--' + lebel++);
+			// 	formPreview.id = (formPreviewNumber);
+			// 	const formImageAdd = document.querySelector('#' + formImageNumber);
 
-				// изменения в инпуте файл
-				formImageAdd.addEventListener('change', () =>  {
-					uploadFile(formImage.files[0]);
-				});
+			// 	// изменения в инпуте файл
+			// 	formImageAdd.addEventListener('change', () =>  {
+			// 		uploadFile(formImage.files[0]);
+			// 	});
 
-				function uploadFile(file) {
+			// 	function uploadFile(file) {
 			
-					if (!['image/jpeg', 'image/png', 'image/gif', 'image/ico', 'application/pdf'].includes(file.type)) {
-						alert('Только изображения');
-						formImage.value = '';
-						return;
-					}
+			// 		if (!['image/jpeg', 'image/png', 'image/gif', 'image/ico', 'application/pdf'].includes(file.type)) {
+			// 			alert('Только изображения');
+			// 			formImage.value = '';
+			// 			return;
+			// 		}
 			
-					if (file.size > 2 * 1024 * 1024) {
-						alert('Размер менее 2 мб.');
-						return;
-					}
+			// 		if (file.size > 2 * 1024 * 1024) {
+			// 			alert('Размер менее 2 мб.');
+			// 			return;
+			// 		}
 			
-					var reader = new FileReader();
-					reader.onload = function (e) {
-						if(['application/pdf'].includes(file.type)) {
-							formPreview.innerHTML = `Файл выбран`;
-						}else{
-							formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-						}
+			// 		var reader = new FileReader();
+			// 		reader.onload = function (e) {
+			// 			if(['application/pdf'].includes(file.type)) {
+			// 				formPreview.innerHTML = `Файл выбран`;
+			// 			}else{
+			// 				formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+			// 			}
 						
-					};
-					reader.onerror = function (e) {
-						alert('Ошибка');
-					};
-					reader.readAsDataURL(file);
-				}
-			})
+			// 		};
+			// 		reader.onerror = function (e) {
+			// 			alert('Ошибка');
+			// 		};
+			// 		reader.readAsDataURL(file);
+			// 	}
+			// })
 
 			function formAddError(input) {
 				let div = document.createElement('div');
