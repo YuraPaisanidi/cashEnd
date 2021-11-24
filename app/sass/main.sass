@@ -1737,6 +1737,9 @@
 		display: flex
 		align-items: center
 		gap: 15px
+		
+		+r(370)
+			gap: 10px
 
 		&_wrap
 			display: flex
@@ -1746,12 +1749,20 @@
 			border-radius: 12px
 			background: $gray3
 
+			+r(370)
+				padding: 10px
+
+
 		&_photo
 			width: 140px
 			height: 100px
 			border-radius: 12px
 			background: $gray2
 			overflow: hidden
+
+			+r(370)
+				width: 120px
+				height: 90px
 
 			img
 				object-fit: cover
@@ -1764,6 +1775,9 @@
 				font-size: 18px
 				font-weight: 600
 				margin-bottom: 10px
+
+				+r(370)
+					font-size: 16px
 
 
 // -----MODAL-----
