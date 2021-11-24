@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Вывести на карту</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<!-- <meta property="og:image" content="img/preview.jpg"> -->
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body class="payment-bg">
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="error">
+			<div class="error__container container">
+				<!-- <div class="payment__wrap"> -->
+
+					<div class="error__message">
+						<img src="img/error.svg" alt="">
+						<div class="error__text">
+							<p class="error__title">Что-то пошло не так</p>
+							<p class="error__desc">Попробуйте вернуться позже</p>
+						</div>
+						<a href="#" class="error__btn btn">Закрыть</a>
+					</div>
+				<!-- </div> -->
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>

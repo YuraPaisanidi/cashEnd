@@ -1531,9 +1531,33 @@
 			a
 				max-width: 195px
 
-.footer
+//--------------------Error------------
+.error
+	@extend .payment
+
 	&__container
-		+between
+		@extend .payment__container
+
+	&__message
+		@extend .payment__message
+		gap: 0
+		max-width: 360px
+		width: 100%
+
+	img
+		margin-bottom: 10px
+
+	&__title
+		font-size: 26px
+		font-weight: 800
+
+	&__text
+		margin-bottom: 30px
+
+	&__btn
+		max-width: 360px
+		width: 100%
+
 
 
 // -----MODAL-----
