@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Верификация</title>
+	<meta name="description" content="Cashend">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" type="text/css" href="css/lightpick.css">
+	<script src="js/app.min.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<button type="button" class="header__btn">
+				<div class="header__btn_close">
+					<span></span>
+					<span></span>
+				</div>
+				Закрыть
+			</button>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="verification">
+			<div class="verification__container container">
+				<div class="verification__wrap">
+					<p class="verification__subtitle">
+						Верификация 4/5
+					</p>
+					<h1 class="h2 verification__title">Фото с документом</h1>
+
+					<form class="verification__form">
+
+						<div class="verification__form_wrap verification__form_wrap--photo">
+
+							<div class="verification__form_text">
+								<span>Сделайте селфи с Удостоверением Личности</span>
+								<p>
+									Лицо должно быть крупным планом,без посторонних предметов
+									(головной убор,очки). Справа или слева от лица нужно показать 
+									лицевую сторону Удостоверения Личности.
+								</p>
+							</div>
+
+							<div class="verification__add_wrap">
+								<div class="verification__add">
+									<div class="verification__add_photo">
+										<img src="img/no-img.jpg" alt="">
+									</div>
+									<div class="verification__add_text">
+										<p>Ваше фото с документом</p>
+										<div class="form__file formImgFile">
+											<div class="form__file_item">
+												<label class="formLebel form__file_button publishing__file">Прикрепить</label>
+												<input accept=".jpg, .png, .gif, .ico" type="file" name="image" class="formImage form__file_input">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="verification__btns">
+							<button type="submit" class="verification__btn verification__btn--back btn">Назад</button>
+							<button type="submit" class="verification__btn btn">Продолжить</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>
