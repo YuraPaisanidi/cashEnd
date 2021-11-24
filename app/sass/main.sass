@@ -321,6 +321,9 @@
 	+r(992)
 		padding-top: 60px
 
+	+r(576)
+		padding-top: 30px
+
 	&__container
 		display: flex
 		flex-direction: column
@@ -1642,6 +1645,7 @@
 
 	&__title
 		margin-bottom: 20px
+		text-align: center
 
 	&__form
 		width: 100%
@@ -1657,6 +1661,7 @@
 			grid-template-columns: 1fr 1fr
 			gap: 10px
 			margin-bottom: 20px
+			width: 100%
 
 			+r(576)
 				grid-template-columns: 1fr
@@ -1675,6 +1680,16 @@
 				
 				label
 					font-size: 14px
+
+			&--doc
+				grid-template-columns: 1fr
+
+				.form__item
+
+					&:first-child
+						grid-column-start: 1
+						grid-column-end: 1
+
 	&__input
 		height: 40px
 
@@ -1686,12 +1701,36 @@
 			background-repeat: no-repeat
 			background-position: right 18px center
 
+		&_wrap
+			display: grid
+			grid-template-columns: 1fr 1fr
+			gap: 10px
+
+			+r(576)
+				grid-template-columns: 1fr
+
 	&__btn
 		max-width: 255px
 		width: 100%
 
 		+r(576)
 			max-width: 100%
+		
+		&--back
+			background: $gray2
+			color: $gray0
+			border-color: transparent
+
+			&:hover
+				background: darken($gray2, 10%)
+				color: $gray0
+				border-color: transparent
+
+	&__btns
+		display: grid
+		grid-template-columns: 1fr 1fr
+		gap: 10px
+		width: 100%
 
 
 // -----MODAL-----
