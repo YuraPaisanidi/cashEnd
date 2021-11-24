@@ -163,26 +163,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 				let formData = new FormData(item);
 
-				if (error === 0) {
-					item.classList.add('_sending');
-					let response = await fetch('sendmail.php', {
-						method: 'POST',
-						body: formData
-					});
+			// 	if (error === 0) {
+			// 		item.classList.add('_sending');
+			// 		let response = await fetch('sendmail.php', {
+			// 			method: 'POST',
+			// 			body: formData
+			// 		});
 
-					if (response.ok) {
-						let modalThanks = document.querySelector('#modal__thanks');
-						formParent.parentNode.style.display = 'none';
+			// 		if (response.ok) {
+			// 			let modalThanks = document.querySelector('#modal__thanks');
+			// 			formParent.parentNode.style.display = 'none';
 
-						modalThanks.classList.add('active');
-						item.reset();
-						item.classList.remove('_sending');
-					} else {
-						alert('Ошибка при отправке');
-						item.classList.remove('_sending');
-					}
+			// 			modalThanks.classList.add('active');
+			// 			item.reset();
+			// 			item.classList.remove('_sending');
+			// 		} else {
+			// 			alert('Ошибка при отправке');
+			// 			item.classList.remove('_sending');
+			// 		}
 
-				}
+			// 	}
 			}
 
 			function formValidate(item) {

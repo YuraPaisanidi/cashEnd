@@ -77,7 +77,6 @@
 		position: absolute
 		right: 0
 		top: 50%
-		// transform: translate(0, -50%)
 		width: 12px
 		height: 2px
 		background-color: $gray0
@@ -377,9 +376,6 @@
 
 		&_wrap
 			position: relative
-
-		// &--pass
-		// 	padding: 0 20px !important
 
 		&--tel
 			padding: 0 40px !important
@@ -1504,9 +1500,7 @@
 				height: 20px
 				width: 20px
 				border-radius: 100%
-				// left: -1px
 				position: relative
-				// top: 3px
 				z-index: 1
 				+transition
 
@@ -1857,105 +1851,6 @@
 			width: 100%
 
 
-// -----MODAL-----
-.modal
-	display: flex
-	visibility: hidden
-	opacity: 0
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	min-width: 100vw
-	min-height: 100vh
-	padding: 30px
-	z-index: 10000
-	background-color: rgba(#1a1a1d, .7)
-	overflow: auto
-	padding: 40px 0
-	+transition
-
-	&.active
-		opacity: 1
-		visibility: visible
-
-		.modal__form
-			transform: translate(0, 0)
-			opacity: 1
-
-	&__close
-		position: absolute
-		right: 0
-		top: -40px
-		display: block
-		width: 30px
-		height: 30px
-		border-radius: 50%
-		border: none
-		cursor: pointer
-		transition: all .6s
-		background-color: transparent
-
-		+r(576)
-			width: 30px
-			height: 30px
-
-		&:hover
-			outline: none
-			transform: rotate(90deg)
-
-			span
-				background: $accent
-
-		span
-			display: block
-			position: absolute
-			left: 50%
-			top: 50%
-			background: #fff
-			transition: all .6s
-			border-radius: 4px
-			height: 22px
-			width: 3px
-
-			&:first-child
-				transform: translate(-50%, -50%) rotate(45deg)
-
-			&:last-child
-				transform: translate(-50%, -50%) rotate(-45deg)
-
-	&__form
-		z-index: 1
-		background-color: #fff
-		box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
-		width: 100%
-		max-width: 500px
-		height: auto
-		padding: 50px
-		border: 1px solid #8d8d8e
-		margin: auto
-		transform: translate(0, -150px)
-		+transition
-
-		&::after
-			border-radius: 20px
-
-		+r(992)
-			max-width: 90vw
-			padding: 40px
-		
-		+r(576)
-			padding: 25px
-
-	h3
-		text-transform: none
-		font-size: 1.3em
-		margin-bottom: 20px
-		text-align: center
-		font-weight: 600
-
-
 .form
 	position: relative
 	max-width: 500px
@@ -1999,8 +1894,6 @@
 
 	&__input
 		width: 100%
-		// height: 55px
-		// line-height: 55px
 		padding: 0 20px
 		border: 1px solid transparent
 		background: $gray3
@@ -2078,7 +1971,6 @@
 
 		&_item
 			position: relative
-			// margin-bottom: 10px
 
 		&_input
 			position: absolute
@@ -2106,50 +1998,6 @@
 
 			img
 				max-width: 100%
-
-	// &__checkbox
-	// 	&._error
-	// 		.form__checkbox_label::before
-	// 			box-shadow: 0 0 7px 0 rgba(red, 1)
-
-	// 	&_label
-	// 		position: relative
-	// 		width: 100%
-	// 		font-size: 16px
-	// 		line-height: 140%
-	// 		display: inline-flex
-	// 		align-items: center
-	// 		cursor: pointer
-
-	// 		&::before
-	// 			content: ''
-	// 			align-self: flex-start
-	// 			flex: 0 0 24px
-	// 			height: 24px
-	// 			background-color: $dark
-	// 			border-radius: 4px
-	// 			margin-right: 10px
-	// 			+transition
-
-	// 		&::after
-	// 			content: ''
-	// 			width: 16px
-	// 			height: 16px
-	// 			position: absolute
-	// 			top: 4px
-	// 			left: 4px
-	// 			background-color: #fff
-	// 			transform: scale(0)
-	// 			+transition
-
-	// 		a
-	// 			color: $gray0
-
-	// 	&_input
-	// 		display: none
-
-	// 		&:checked + .form__checkbox_label::after
-	// 			transform: scale(1)
 
 	&__btn
 		order: 1
