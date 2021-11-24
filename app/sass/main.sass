@@ -904,6 +904,7 @@
 		input[type="radio"] + label
 
 .lightpick
+	border-radius: 12px
 
 	&__footer
 		justify-content: flex-start !important
@@ -1565,14 +1566,12 @@
 	&__container
 		@extend .transaction__container
 
-
 	&__form
 		max-width: 420px
 		width: 100%
 		display: flex
 		flex-direction: column
 		gap: 20px
-
 
 	&__wrap
 		display: flex
@@ -1622,6 +1621,77 @@
 	&__btn
 		max-width: 100%
 		width: 100%
+
+//-------------------Verification---------------------------
+.verification
+	@extend .transaction
+
+	&__container
+		@extend .transaction__container
+
+	&__wrap
+		max-width: 520px
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__subtitle
+		font-weight: 500
+		margin-bottom: 10px
+
+	&__title
+		margin-bottom: 20px
+
+	&__form
+		width: 100%
+		display: flex
+		align-items: center
+		flex-direction: column
+
+		&_wrap
+			padding: 30px
+			border: 2px solid $gray2
+			border-radius: 12px
+			display: grid
+			grid-template-columns: 1fr 1fr
+			gap: 10px
+			margin-bottom: 20px
+
+			+r(576)
+				grid-template-columns: 1fr
+				border: none
+				padding: 0
+
+			.form__item
+
+				&:first-child
+					grid-column-start: 1
+					grid-column-end: 3
+
+					+r(576)
+						grid-column-start: 1
+						grid-column-end: 1
+				
+				label
+					font-size: 14px
+	&__input
+		height: 40px
+
+	&__date
+		
+		input
+			position: relative
+			background-image: url(../img/calendar.svg)
+			background-repeat: no-repeat
+			background-position: right 18px center
+
+	&__btn
+		max-width: 255px
+		width: 100%
+
+		+r(576)
+			max-width: 100%
 
 
 // -----MODAL-----
