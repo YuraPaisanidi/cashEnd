@@ -1691,6 +1691,9 @@
 						grid-column-start: 1
 						grid-column-end: 1
 
+			&--check
+				grid-template-columns: 1fr
+
 		&_text
 			margin-bottom: 5px
 			
@@ -1789,6 +1792,60 @@
 
 				+r(370)
 					font-size: 16px
+
+	&__check
+
+		&:first-child
+			grid-column-start: 1
+			grid-column-end: 3
+
+		span
+			font-size: 14px
+			color: $gray1
+			margin-bottom: 5px
+
+		&_wrap
+			display: grid
+			grid-template-columns: 1fr 1fr
+			gap: 15px
+			width: 100%
+
+	&__checkbox
+		display: flex
+		gap: 6px
+
+		label
+			font-size: 14px
+
+		&_input
+			position: absolute
+			z-index: -1
+			opacity: 0
+
+		&_input + label
+			display: inline-flex
+			align-items: center
+			user-select: none
+
+		&_input + label::before
+			content: ''
+			display: inline-block
+			width: 18px
+			height: 18px
+			flex-shrink: 0
+			flex-grow: 0
+			border: 1px solid #adb5bd
+			border-radius: 0.25em
+			margin-right: 10px
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: 50% 50%
+
+		input:checked + label::before
+			background: $accent
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+
+
 
 
 // -----MODAL-----
@@ -2041,49 +2098,49 @@
 			img
 				max-width: 100%
 
-	&__checkbox
-		&._error
-			.form__checkbox_label::before
-				box-shadow: 0 0 7px 0 rgba(red, 1)
+	// &__checkbox
+	// 	&._error
+	// 		.form__checkbox_label::before
+	// 			box-shadow: 0 0 7px 0 rgba(red, 1)
 
-		&_label
-			position: relative
-			width: 100%
-			font-size: 16px
-			line-height: 140%
-			display: inline-flex
-			align-items: center
-			cursor: pointer
+	// 	&_label
+	// 		position: relative
+	// 		width: 100%
+	// 		font-size: 16px
+	// 		line-height: 140%
+	// 		display: inline-flex
+	// 		align-items: center
+	// 		cursor: pointer
 
-			&::before
-				content: ''
-				align-self: flex-start
-				flex: 0 0 24px
-				height: 24px
-				background-color: $dark
-				border-radius: 4px
-				margin-right: 10px
-				+transition
+	// 		&::before
+	// 			content: ''
+	// 			align-self: flex-start
+	// 			flex: 0 0 24px
+	// 			height: 24px
+	// 			background-color: $dark
+	// 			border-radius: 4px
+	// 			margin-right: 10px
+	// 			+transition
 
-			&::after
-				content: ''
-				width: 16px
-				height: 16px
-				position: absolute
-				top: 4px
-				left: 4px
-				background-color: #fff
-				transform: scale(0)
-				+transition
+	// 		&::after
+	// 			content: ''
+	// 			width: 16px
+	// 			height: 16px
+	// 			position: absolute
+	// 			top: 4px
+	// 			left: 4px
+	// 			background-color: #fff
+	// 			transform: scale(0)
+	// 			+transition
 
-			a
-				color: $gray0
+	// 		a
+	// 			color: $gray0
 
-		&_input
-			display: none
+	// 	&_input
+	// 		display: none
 
-			&:checked + .form__checkbox_label::after
-				transform: scale(1)
+	// 		&:checked + .form__checkbox_label::after
+	// 			transform: scale(1)
 
 	&__btn
 		order: 1
