@@ -148,7 +148,7 @@
 
 	&__logo
 		display: block
-		margin-left: 33%
+		margin-left: 35%
 
 		+r(992)
 			margin-left: 0
@@ -372,7 +372,7 @@
 
 	&__input
 		position: relative
-		height: 55px
+		height: 54px
 
 		&_wrap
 			position: relative
@@ -728,6 +728,7 @@
 		&_date
 			display: flex
 
+
 			input
 				width: 0
 				background: none
@@ -744,6 +745,9 @@
 				padding: 0 12px
 				border-radius: 12px
 				+transition
+
+				&:hover
+					cursor: pointer
 
 				span
 
@@ -771,6 +775,9 @@
 				font-size: 14px
 				padding: 0 10px
 				max-width: 100px
+
+			&:hover
+				cursor: pointer
 
 	&__table
 
@@ -1238,8 +1245,8 @@
 		gap: 5px
 
 		&_input
-			height: 55px
-			line-height: 55
+			height: 54px
+			line-height: 54
 			text-align: center
 
 	&__submit
@@ -1383,8 +1390,8 @@
 			margin-bottom: 10px
 
 	&__input
-		height: 55px
-		line-height: 55
+		height: 54px
+		line-height: 54
 		max-width: 175px
 		padding-right: 65px !important
 
@@ -1613,7 +1620,8 @@
 				background: $gray2
 
 	&__input
-		height: 55px
+		height: 54px
+		line-height: 54
 
 	&__btn
 		max-width: 100%
@@ -1903,7 +1911,6 @@
 			padding: 0 14px
 
 		&::placeholder
-			line-height: 55px
 			font-size: 16px
 			color: $gray1
 
