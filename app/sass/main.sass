@@ -435,10 +435,10 @@
 
 	&__sms
 
-		&.error
+		&--error
 
 			input
-				border-color: $red
+				border-color: $red !important
 
 	&__remind
 		color: $red
@@ -912,6 +912,11 @@
 .lightpick
 	border-radius: 12px
 
+	&__day
+		
+		&:hover
+			cursor: pointer
+
 	&__footer
 		justify-content: flex-start !important
 		gap: 5px
@@ -936,6 +941,9 @@
 		select
 			font-size: 20px !important
 			font-weight: 500 !important
+
+			&:hover
+				cursor: pointer
 
 	&__select-months
 		text-transform: capitalize
@@ -2067,8 +2075,17 @@
 				max-width: 50%
 
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button 
-	/* display: none; <- Crashes Chrome on hover */
-	-webkit-appearance: none
-	margin: 0
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button 
+// 	/* display: none; <- Crashes Chrome on hover */
+// 	-webkit-appearance: none
+// 	margin: 0
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+    -webkit-appearance: none
+    margin: 0
+
+input[type="number"] 
+    -moz-appearance: textfield
